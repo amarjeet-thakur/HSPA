@@ -24,7 +24,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <p>BHK</p>
                   <div class="btn-group" btnRadioGroup
                   formControlName="BHK"
@@ -42,7 +42,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <p>Property Type</p>
                   <div class="btn-group" btnRadioGroup
                   formControlName='PType'
@@ -59,7 +59,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <p>Furnishing Type</p>
                   <div class="btn-group" btnRadioGroup
                   formControlName="FType"
@@ -77,7 +77,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <label>in Building/Society/Project</label>
                   <input type="text" class="form-control"
                   ngModel
@@ -89,7 +89,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <label>City</label>
                   <input type="text"
                   class="form-control"
@@ -101,7 +101,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                     <button type="button"
                     class="btn btn-primary btn-block"
                     (click)="selectTab(1, BasicInfo.valid)">Next</button>
@@ -124,14 +124,14 @@
                   </div>
 
                   <div *ngIf="SellRent.value==2">
-                    <div class="form-group col-12">
+                    <div class="form-group col-12 mt-md-3">
                       <label>Security (in USD)</label>
                       <input type="text"
                       formControlName="Security"
                       class="form-control">
                     </div>
 
-                    <div class="form-group col-12">
+                    <div class="form-group col-12 mt-md-3">
                       <label>Maintenance (in USD)</label>
                       <input type="text"
                       formControlName="Maintenance"
@@ -139,7 +139,7 @@
                     </div>
                   </div>
 
-                  <div class="form-group col-12">
+                  <div class="form-group col-12 mt-md-3">
                     <label>Built Area (in Sqr Feet)</label>
                     <input type="text"
                     class="form-control"
@@ -151,18 +151,18 @@
                     </div>
                   </div>
 
-                  <div class="form-group col-12">
+                  <div class="form-group col-12 mt-md-3">
                     <label>Carpet Area (in Sqr Feet)</label>
                     <input type="text"
                     formControlName="CarpetArea"
                     class="form-control">
                   </div>
 
-                  <div class="form-group col-12">
+                  <div class="form-group col-12 mt-md-3">
                     <button type="button" class="btn btn-primary btn-block"
                     (click)="selectTab(2, PriceInfo.valid)">Next</button>
 
-                    <button type="button" class="btn btn-primary btn-block"
+                    <button type="button" class="btn btn-primary btn-block m-lg-2"
                     (click)="selectTab(0, PriceInfo.valid)">Back</button>
                   </div>
               </tab>
@@ -176,14 +176,14 @@
                   class="form-control">
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <label>Total Floor</label>
                   <input type="text"
                   formControlName="TotalFloor"
                   class="form-control">
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <label>Address</label>
                   <input type="text"
                   class="form-control"
@@ -194,18 +194,18 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <label>Landmark</label>
                   <input type="text"
                   formControlName="LandMark"
                   class="form-control">
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <button type="button" class="btn btn-primary btn-block"
                   (click)="selectTab(3, AddressInfo.valid)">Next</button>
 
-                  <button type="button" class="btn btn-primary btn-block"
+                  <button type="button" class="btn btn-primary btn-block m-lg-2"
                   (click)="selectTab(1, AddressInfo.valid)">Back</button>
                 </div>
               </tab>
@@ -231,7 +231,7 @@
 
                 <div
                 *ngIf="RTM.value==2"
-                class="form-group col-6">
+                class="form-group col-6 mt-md-3">
                   <label>Possession/Avaialble From</label>
                   <input type="text"
                   class="form-control"
@@ -243,14 +243,14 @@
 
                 <div
                 *ngIf="RTM.value==1"
-                class="form-group col-3">
+                class="form-group col-3 mt-md-3">
                   <label>Age of Property</label>
                   <input type="text"
                   formControlName="AOP"
                   class="form-control">
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <p>Gated Community</p>
                   <div class="btn-group"
                   btnRadioGroup
@@ -262,7 +262,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <p>Main Entrance</p>
                   <div class="btn-group" btnRadioGroup
                   formControlName="MainEntrance">
@@ -277,7 +277,7 @@
                   </div>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <label>Description</label>
                   <textarea type="text"
                   class="form-control"
@@ -285,11 +285,11 @@
                   rows="6"></textarea>
                 </div>
 
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                     <button type="button" class="btn btn-primary btn-block"
                     (click)="selectTab(4, OtherInfo.valid)">Next</button>
 
-                    <button type="button" class="btn btn-primary btn-block"
+                    <button type="button" class="btn btn-primary btn-block m-lg-2"
                     (click)="selectTab(2, OtherInfo.valid)">Back</button>
                 </div>
               </tab>
@@ -301,11 +301,11 @@
                       This is under construction
                   </div>
                 </div>
-                <div class="form-group col-12">
+                <div class="form-group col-12 mt-md-3">
                   <button type="button" class="btn btn-primary btn-block"
                   (click)="selectTab(3, true)">Back</button>
-                  <button type="submit" class="btn btn-primary btn-block">Save</button>
-                  <button type="reset" class="btn btn-primary btn-block">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-block m-lg-2">Save</button>
+                  <button type="reset" class="btn btn-primary btn-block m-lg-2">Cancel</button>
                 </div>
               </tab>
             </tabset>

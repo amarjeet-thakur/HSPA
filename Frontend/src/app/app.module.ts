@@ -8,6 +8,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,9 @@ import { UserLoginComponent } from './user/user-login/UserLogin/UserLogin.compon
 import { UserService } from './service/user-service.service';
 import { AlertyfyService } from './service/alertyfy.service';
 import { AuthService } from './service/auth.service';
+import { PropertyDetailResolverService } from './property/property-data/property-detail-resolver.service';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { SortPipe } from './Pipes/sort.pipe';
 
 
 
@@ -29,7 +33,9 @@ const appRoutes: Routes = [
   { path: '', component: PropertyListComponent },
   { path: 'rent-property', component: PropertyListComponent },
   { path: 'add-property', component: AddPropertyComponent },
-  { path: 'property-deta/:Id',component: PropertyDataComponent },
+  { path: 'property-deta/:id',
+                              component: PropertyDataComponent, 
+                              resolve: {prp: PropertyDetailResolverService}},
   { path: 'user/register', component: UserRegisterComponent },
   { path: 'user/login', component: UserLoginComponent },
   { path: '**', component: PropertyListComponent }
@@ -46,6 +52,8 @@ const appRoutes: Routes = [
     PropertyDataComponent,
     UserRegisterComponent,
     UserLoginComponent,
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
@@ -57,13 +65,15 @@ const appRoutes: Routes = [
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    NgxGalleryModule 
   ],
   providers: [
     HousingService,
     UserService,
     AlertyfyService,
-    AuthService
+    AuthService,
+    PropertyDetailResolverService
   ],
   bootstrap: [AppComponent]
 })
