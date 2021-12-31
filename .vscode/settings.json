@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/eadb19a1-e26b-4015-82d8-9531ccaa60c9/resourceGroups/HSPA/providers/Microsoft.Web/sites/hspaapp",
+    "appService.deploySubpath": "WebAPI\\bin\\Release\\netcoreapp3.1\\publish"
+}

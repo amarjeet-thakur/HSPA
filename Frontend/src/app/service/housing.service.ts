@@ -13,13 +13,17 @@ export class HousingService {
 
   constructor(private http: HttpClient) { }
 
-  getProperty(id: number){
+  getProperty(id: number) {
     return this.getAllProperties().pipe(
       map(propertiesArray => {
         //throw new Error('Some error');
         return propertiesArray.find(x => x.Id === id);
       })
     );
+  }
+
+  getAllCities(): Observable<string[]> {
+    return this.http.get<string[]>('http://localhost:5000/api/city');
   }
 
   getAllProperties(SellRent?: number): Observable<Property[]> {
