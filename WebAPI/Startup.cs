@@ -75,6 +75,8 @@ namespace WebAPI
             app.UseCors(m => m.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
